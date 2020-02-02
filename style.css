@@ -1,0 +1,641 @@
+body,
+html {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .start-content {
+    // background-image: url(./src/main-bg.png);
+    //background-position: top center;
+    //  background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100%;
+
+} */
+.title {
+  padding-top: 91px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  font-size: 80px;
+  color: #2f1946;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.start-container-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(./src/main-bg.png);
+  background-position: top center;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.border {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  border: 1px solid #81398b;
+}
+
+.button-in-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 163px;
+  height: 50px;
+  background: #81398b;
+  border-radius: 25px;
+  margin: 11px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.button-in-start img {
+  padding-left: 12px;
+}
+
+.button-regular {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.block-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 75px;
+}
+
+.block-items .item {
+  width: 235px;
+  height: 330px;
+  background-color: #e22028;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-items .item:last-child {
+  background-color: #ff6c00;
+}
+
+.block-items .item:first-child {
+  background-color: #fe4a5d;
+}
+
+.block-subitems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.block-subitems .subitem {
+  width: 235px;
+  height: 110px;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.9;
+  background-color: #e22028;
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.block-subitems .subitem:last-child {
+  background-color: #ff6c00;
+}
+
+.block-subitems .subitem:first-child {
+  background-color: #fe4a5d;
+}
+
+.main-title {
+  padding-top: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Dosis', sans-serif;
+  font-size: 52px;
+  color: #2f1946;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.main-title img {
+  padding-right: 12px;
+}
+
+.main-subtitle {
+  padding-top: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  color: #2f1946;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.main-subtitle span {
+  padding-top: 7px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  color: #fe4a5d;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.signUp-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 55px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1800px;
+}
+
+.signUp-container .photos {
+  opacity: 0.7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.signUp-container .photos img {
+  padding: 0;
+  width: 343px;
+  height: 189px;
+  margin: 14px;
+}
+
+.signUp-container .main {
+  width: 466px;
+  height: 552px;
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e22028), to(#f9b416));
+  background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
+}
+
+.signUp-container .main .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  margin: 15px;
+  padding: 65px 75px;
+}
+
+.signUp-container .main .form-container h3 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 38px;
+  color: #2f1946;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.signUp-container .main .form-container .facebook-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  border-radius: 4px;
+  background-color: #2f53a3;
+  height: 41px;
+  width: 100%;
+}
+
+.signUp-container .main .form-container .facebook-btn img {
+  padding-right: 8px;
+}
+
+.signUp-container .main .form-container .submit-btn {
+  border-radius: 4px;
+  background-color: #81398b;
+  height: 41px;
+  width: 100%;
+}
+
+.signUp-container .main .form-container input {
+  width: 270px;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid #dcdcdc;
+  background-color: #ffffff;
+  padding-left: 12px;
+  margin-bottom: 12px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #642f6b;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.signUp-container .main .form-container input::-webkit-input-placeholder {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #642f6b;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.signUp-container .main .form-container input:-ms-input-placeholder {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #642f6b;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.signUp-container .main .form-container input::-ms-input-placeholder {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #642f6b;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.signUp-container .main .form-container input::placeholder {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #642f6b;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.signUp-container .main .form-container .choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.signUp-container .main .form-container .choice p {
+  font-family: 'Dosis', sans-serif;
+  font-size: 14px;
+  color: #9b9b9b;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.signUp-container .main .form-container .choice hr {
+  width: 132px;
+  border-radius: 1px;
+  background-color: #dcdcdc;
+}
+
+/* .signUp-container :first-child {
+    padding-top: 85px;
+}
+
+.signUp-container :nth-child(2) {
+    padding-top: 15px;
+}
+
+.signUp-container :nth-child(4) {
+    padding-top: 35px;
+} */
+.join-now {
+  position: relative;
+  height: 730px;
+  opacity: 0.95;
+  background-color: #81398b;
+  background-image: url("./src/join-now-bg.png");
+  background-position: center;
+  margin-top: 159px;
+}
+
+.join-now-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  border-radius: 50%;
+}
+
+.join-now-item--main {
+  width: 371px;
+  height: 371px;
+  background-color: #ffffff;
+  position: absolute;
+  top: calc(50% - 371px/2);
+  left: calc(50% - 371px/2);
+}
+
+.join-now-item--main h2 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 60px;
+  color: #2f1946;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.join-now-item--main p {
+  margin-top: 19px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 46px;
+  color: #2f1946;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.join-now-item--main .join-now-btn {
+  margin-top: 28px;
+  width: 139px;
+  height: 39px;
+  border-radius: 3px;
+  background-color: #e22028;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e22028), to(#f9b416));
+  background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
+}
+
+.red {
+  background-color: #fe4a5d;
+}
+
+.orange {
+  background-color: #ff6c00;
+}
+
+.yellow {
+  background-color: #f9b416;
+}
+
+.small {
+  width: 101px;
+  height: 101px;
+}
+
+.medium {
+  width: 159px;
+  height: 159px;
+}
+
+.big {
+  width: 189px;
+  height: 189px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .newSlitter {
+  padding: 35px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .newSlitter p {
+  padding-right: 15px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #00cfae;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+footer .newSlitter input {
+  width: 285px;
+  height: 36px;
+  padding-left: 13px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #cacaca;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+footer .newSlitter button {
+  width: 135px;
+  height: 40px;
+  border-radius: 0 4px 4px 0;
+  background-color: #00cfae;
+}
+
+footer .about {
+  height: 70px;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .about-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 828px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #2f1946;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+footer .flag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 23px 0;
+}
+
+footer .flag-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 710px;
+}
+
+footer .line {
+  width: 46%;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #d3d3d3;
+}
+
+footer .ps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 14px 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: #2f1946;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.left-bar {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 0 3px 3px 0;
+  background-color: #45124c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 195px;
+  position: fixed;
+  top: calc(50% - 97px);
+  left: 0;
+}
+/*# sourceMappingURL=style.css.map */

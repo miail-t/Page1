@@ -1,0 +1,480 @@
+@mixin Dosis-font($font-size: 14px, $color: #fff, $line-height: 30px) {
+    font-family: 'Dosis', sans-serif;
+    font-size: $font-size;
+    color: $color;
+    font-weight: 700;
+    line-height: $line-height;
+}
+
+@mixin Lato-font($font-size: 16px, $color: #cacaca, $line-height: 30px) {
+    font-family: 'Lato', sans-serif;
+    font-size: $font-size;
+    color: $color;
+    font-weight: 400;
+    line-height: $line-height;
+}
+
+
+
+
+
+body,
+html {
+
+    margin: 0px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .start-content {
+    // background-image: url(./src/main-bg.png);
+    //background-position: top center;
+    //  background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100%;
+
+} */
+
+.container {
+    // height: 100%;
+    //  max-width: 1270px;
+    //  margin: auto;
+
+}
+
+.title {
+    padding-top: 91px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    @include Dosis-font(80px, #2f1946);
+}
+
+.start-container-row {
+   // height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: url(./src/main-bg.png);
+    background-position: top center;
+   // background-repeat: no-repeat;
+   // background-size: cover;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.border {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
+    border: 1px solid #81398b;
+}
+
+.button-in-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 163px;
+    height: 50px;
+    background: #81398b;
+    border-radius: 25px;
+    margin: 11px;
+
+    @include Dosis-font(18px);
+
+    img {
+        padding-left: 12px;
+    }
+}
+
+.button-regular {
+    @include Dosis-font(16px);
+    text-transform: uppercase;
+}
+
+.block-items {
+    display: flex;
+    padding-top: 75px;
+
+    .item {
+        width: 235px;
+        height: 330px;
+        background-color: #e22028;
+        margin: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item:last-child {
+        background-color: #ff6c00;
+    }
+
+    .item:first-child {
+        background-color: #fe4a5d;
+    }
+
+
+}
+
+.block-subitems {
+    display: flex;
+    justify-content: center;
+
+    .subitem {
+        width: 235px;
+        height: 110px;
+        margin: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
+        background-color: #e22028;
+
+        @include Dosis-font(32px);
+    }
+
+    .subitem:last-child {
+        background-color: #ff6c00;
+    }
+
+    .subitem:first-child {
+        background-color: #fe4a5d;
+    }
+}
+
+.main-title {
+    padding-top: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    @include Dosis-font(52px, #2f1946);
+    text-transform: uppercase;
+
+    img {
+        padding-right: 12px;
+    }
+
+
+}
+
+.main-subtitle {
+    padding-top: 44px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    @include Dosis-font(30px, #2f1946, 36px);
+
+    span {
+        padding-top: 7px;
+        @include Dosis-font(30px, #fe4a5d, 36px);
+    }
+}
+
+.signUp-container {
+    display: flex;
+    padding-top: 55px;
+    justify-content: center;
+    width: 1800px;
+
+    .photos {
+        opacity: 0.7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        img {
+            padding: 0;
+            width: 343px;
+            height: 189px;
+            margin: 14px;
+        }
+    }
+
+    .main {
+        width: 466px;
+        height: 552px;
+        background-color: #000000;
+        background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            margin: 15px;
+            padding: 65px 75px;
+
+            h3 {
+                @include Dosis-font(38px, #2f1946);
+                text-transform: uppercase;
+            }
+
+            .facebook-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+                border-radius: 4px;
+                background-color: #2f53a3;
+                height: 41px;
+                width: 100%;
+
+                img {
+                    padding-right: 8px;
+                }
+            }
+
+            .submit-btn {
+                border-radius: 4px;
+                background-color: #81398b;
+                height: 41px;
+                width: 100%;
+            }
+
+            input {
+                width: 270px;
+                height: 35px;
+                border-radius: 4px;
+                border: 2px solid #dcdcdc;
+                background-color: #ffffff;
+                padding-left: 12px;
+                margin-bottom: 12px;
+
+                @include Dosis-font(16px, #642f6b)
+            }
+
+            input::placeholder {
+
+                @include Dosis-font(16px, #642f6b)
+            }
+
+            .choice {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+
+                p {
+                    @include Dosis-font(14px, #9b9b9b);
+                    text-transform: uppercase;
+                    letter-spacing: 0.7px;
+                }
+
+                hr {
+                    width: 132px;
+                    border-radius: 1px;
+                    background-color: #dcdcdc;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+/* .signUp-container :first-child {
+    padding-top: 85px;
+}
+
+.signUp-container :nth-child(2) {
+    padding-top: 15px;
+}
+
+.signUp-container :nth-child(4) {
+    padding-top: 35px;
+} */
+
+.join-now {
+    position: relative;
+    height: 730px;
+    opacity: 0.95;
+    background-color: #81398b;
+    background-image: url("./src/join-now-bg.png");
+    background-position: center;
+    margin-top: 159px;
+}
+
+.join-now-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-radius: 50%;
+
+
+}
+
+.join-now-item--main {
+    width: 371px;
+    height: 371px;
+    background-color: #ffffff;
+
+    h2 {
+        @include Dosis-font(60px, #2f1946);
+        text-transform: uppercase;
+    }
+
+    p {
+        margin-top: 19px;
+        @include Dosis-font(46px, #2f1946);
+    }
+
+    .join-now-btn {
+        margin-top: 28px;
+        width: 139px;
+        height: 39px;
+        border-radius: 3px;
+        background-color: #e22028;
+        background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
+    }
+
+    position: absolute;
+    top: calc(50% - 371px/2);
+    left: calc(50% - 371px/2);
+}
+
+.red {
+    background-color: #fe4a5d;
+}
+
+.orange {
+    background-color: #ff6c00;
+}
+
+.yellow {
+    background-color: #f9b416;
+}
+
+.small {
+    width: 101px;
+    height: 101px;
+}
+
+.medium {
+    width: 159px;
+    height: 159px;
+}
+
+.big {
+    width: 189px;
+    height: 189px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    .newSlitter {
+        padding: 35px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            padding-right: 15px;
+            @include Dosis-font(16px, #00cfae)
+        }
+
+        input {
+            width: 285px;
+            height: 36px;
+            padding-left: 13px;
+            border-radius: 4px 0 0 4px;
+            border: 1px solid #cdcdcd;
+            background-color: #ffffff;
+
+            @include Lato-font()
+        }
+
+        button {
+            width: 135px;
+            height: 40px;
+            border-radius: 0 4px 4px 0;
+            background-color: #00cfae;
+        }
+    }
+
+    .about {
+        height: 70px;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-link {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 828px;
+
+
+            @include Dosis-font(16px, #2f1946, 30px);
+            text-transform: uppercase;
+        }
+    }
+
+    .flag {
+        display: flex;
+        justify-content: center;
+        padding: 23px 0;
+
+        &-link {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 710px;
+        }
+    }
+
+    .line {
+        width: 46%;
+        height: 1px;
+        border-radius: 1px;
+        background-color: #d3d3d3;
+    }
+
+    .ps {
+        display: flex;
+        justify-content: center;
+        padding: 14px 0;
+
+        @include Lato-font(12px, #2f1946, 24px)
+    }
+
+}
+
+.left-bar {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 0 3px 3px 0;
+    background-color: #45124c;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50px;
+    height: 195px;
+
+    position: fixed;
+    top: calc(50% - 97px);
+    left: 0;
+
+
+}
