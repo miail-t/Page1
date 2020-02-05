@@ -1,80 +1,82 @@
-@mixin Dosis-font($font-size: 14px, $color: #fff, $line-height: 30px) {
-    font-family: 'Dosis', sans-serif;
-    font-size: $font-size;
-    color: $color;
-    font-weight: 700;
-    line-height: $line-height;
-}
-
-@mixin Lato-font($font-size: 16px, $color: #cacaca, $line-height: 30px) {
-    font-family: 'Lato', sans-serif;
-    font-size: $font-size;
-    color: $color;
-    font-weight: 400;
-    line-height: $line-height;
-}
-
-
-
-
+@import "mixin.scss";
 
 body,
 html {
-
     margin: 0px;
-
 }
 
 a {
     text-decoration: none;
 }
 
-/* .start-content {
-    // background-image: url(./src/main-bg.png);
-    //background-position: top center;
-    //  background-repeat: no-repeat;
-    // background-attachment: fixed;
-    background-size: 100% 100%;
-    height: 100%;
-
-} */
+.header {
+    position: relative;
+    background: rgba(255, 255, 255, 0.6);
+}
 
 .container {
-    // height: 100%;
-    //  max-width: 1270px;
-    //  margin: auto;
-
+    max-width: 1270px;
+    margin: auto;
 }
 
-.title {
-    padding-top: 91px;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
-    text-transform: uppercase;
-    @include Dosis-font(80px, #2f1946);
+.bg {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.6);
 }
 
-.start-container-row {
-   // height: 100%;
+.start-container {
+    position: absolute;
+    top: 0%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 60%;
 
-    background-image: url(./src/main-bg.png);
-    background-position: top center;
-   // background-repeat: no-repeat;
-   // background-size: cover;
-    background-size: 100% 100%;
-    width: 100vw;
-    height: 100vh;
+    &-title {
+        padding-top: 91px;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+        text-transform: uppercase;
+        @include Dosis-font(80px, #2f1946);
+    }
 
+    &-logo {
+        padding-top: 118px;
+    }
+
+    &-btn-border {
+        margin-top: 83px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        border-radius: 36px;
+        border: 1px solid #81398b;
+
+        @include active();
+    }
 }
 
-.border {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    border-radius: 36px;
-    border: 1px solid #81398b;
+.menu {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 66px;
+    cursor: pointer;
+    z-index: 1;
+
+    &-text {
+        padding-right: 12px;
+        cursor: pointer;
+        @include Dosis-font(18px, #2f1946);
+        text-transform: uppercase;
+
+        &:hover {
+            color: red;
+        }
+    }
 }
+
 
 .button-in-start {
     display: flex;
@@ -91,6 +93,10 @@ a {
     img {
         padding-left: 12px;
     }
+
+    &:hover {
+        background-color: #672e6f;
+    }
 }
 
 .button-regular {
@@ -100,34 +106,37 @@ a {
 
 .block-items {
     display: flex;
-    padding-top: 75px;
+    margin-top: -219px;
+    justify-content: center;
 
-    .item {
+    &-item {
         width: 235px;
-        height: 330px;
+        height: 220px;
         background-color: #e22028;
         margin: 0 20px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:last-child {
+            background-color: #ff6c00;
+        }
+
+        &:first-child {
+            background-color: #fe4a5d;
+        }
+
+        &:hover {
+            opacity: 0.9;
+        }
     }
-
-    .item:last-child {
-        background-color: #ff6c00;
-    }
-
-    .item:first-child {
-        background-color: #fe4a5d;
-    }
-
-
 }
 
 .block-subitems {
     display: flex;
     justify-content: center;
 
-    .subitem {
+    &-subitem {
         width: 235px;
         height: 110px;
         margin: 0 20px;
@@ -138,14 +147,22 @@ a {
         background-color: #e22028;
 
         @include Dosis-font(32px);
-    }
 
-    .subitem:last-child {
-        background-color: #ff6c00;
-    }
+        &:last-child {
+            background-color: #ff6c00;
 
-    .subitem:first-child {
-        background-color: #fe4a5d;
+            &:hover {
+                background-color: #ff6c00;
+            }
+        }
+
+        &:first-child {
+            background-color: #fe4a5d;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
@@ -155,152 +172,178 @@ a {
     justify-content: center;
     align-items: center;
 
-
     @include Dosis-font(52px, #2f1946);
     text-transform: uppercase;
 
-    img {
+    &-icon {
         padding-right: 12px;
     }
-
 
 }
 
 .main-subtitle {
     padding-top: 44px;
-
+    max-width: 860px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
+    align-items: flex-end;
 
     @include Dosis-font(30px, #2f1946, 36px);
+}
 
-    span {
-        padding-top: 7px;
-        @include Dosis-font(30px, #fe4a5d, 36px);
-    }
+.main-autor {
+    padding-top: 7px;
+    @include Dosis-font(30px, #fe4a5d, 36px);
 }
 
 .signUp-container {
     display: flex;
     padding-top: 55px;
     justify-content: center;
-    width: 1800px;
+    overflow: hidden;
+}
 
-    .photos {
-        opacity: 0.7;
+.photos-container {
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &-item {
+        padding: 0;
+
+        height: 189px;
+        margin: 14px;
+    }
+}
+
+.main {
+    width: 466px;
+    height: 552px;
+    background-color: #000000;
+    background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin: 15px;
+    padding: 65px 75px;
+
+    &-title {
+        @include Dosis-font(38px, #2f1946);
+        text-transform: uppercase;
+    }
+
+    &-input {
+        width: 270px;
+        height: 35px;
+        border-radius: 4px;
+        border: 2px solid #dcdcdc;
+        background-color: #ffffff;
+        padding-left: 12px;
+        margin-bottom: 12px;
+
+        @include Dosis-font(16px, #642f6b);
+
+        &:hover {
+            border: 2px solid #642f6b;
+        }
+
+        &:active {
+            border: 2px solid #642f6b;
+        }
+    }
+
+    &-input::placeholder {
+
+        @include Dosis-font(16px, #642f6b)
+    }
+
+    &-choice {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
 
-        img {
-            padding: 0;
-            width: 343px;
-            height: 189px;
-            margin: 14px;
+        &-or {
+            @include Dosis-font(14px, #9b9b9b);
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            padding: 5px 9px;
         }
-    }
-
-    .main {
-        width: 466px;
-        height: 552px;
-        background-color: #000000;
-        background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
-
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-            margin: 15px;
-            padding: 65px 75px;
-
-            h3 {
-                @include Dosis-font(38px, #2f1946);
-                text-transform: uppercase;
-            }
-
-            .facebook-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: 40px;
-                border-radius: 4px;
-                background-color: #2f53a3;
-                height: 41px;
-                width: 100%;
-
-                img {
-                    padding-right: 8px;
-                }
-            }
-
-            .submit-btn {
-                border-radius: 4px;
-                background-color: #81398b;
-                height: 41px;
-                width: 100%;
-            }
-
-            input {
-                width: 270px;
-                height: 35px;
-                border-radius: 4px;
-                border: 2px solid #dcdcdc;
-                background-color: #ffffff;
-                padding-left: 12px;
-                margin-bottom: 12px;
-
-                @include Dosis-font(16px, #642f6b)
-            }
-
-            input::placeholder {
-
-                @include Dosis-font(16px, #642f6b)
-            }
-
-            .choice {
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                width: 100%;
-
-                p {
-                    @include Dosis-font(14px, #9b9b9b);
-                    text-transform: uppercase;
-                    letter-spacing: 0.7px;
-                }
-
-                hr {
-                    width: 132px;
-                    border-radius: 1px;
-                    background-color: #dcdcdc;
-                }
-            }
-        }
-
-
     }
 }
 
 
-/* .signUp-container :first-child {
+hr {
+    width: 132px;
+    border-radius: 1px;
+    background-color: #dcdcdc;
+}
+
+
+.submit-btn {
+    border-radius: 4px;
+    background-color: #81398b;
+    height: 41px;
+    width: 100%;
+
+    @include active(#243f7b);
+
+    &:hover {
+        background-color: #800080;
+    }
+}
+
+.facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: #2f53a3;
+    height: 41px;
+    width: 100%;
+
+    &-icon {
+        padding-right: 8px;
+    }
+
+    &:hover {
+        background-color: #243f7b;
+    }
+
+    @include active();
+}
+
+.column-1 {
     padding-top: 85px;
+    width: 254px;
 }
 
-.signUp-container :nth-child(2) {
+.column-2 {
     padding-top: 15px;
+    width: 343px;
 }
 
-.signUp-container :nth-child(4) {
+.column-3 {
     padding-top: 35px;
-} */
+    width: 304px;
+}
+
+.column-4 {
+    width: 294px;
+}
 
 .join-now {
     position: relative;
+    overflow: hidden;
     height: 730px;
     opacity: 0.95;
     background-color: #81398b;
@@ -316,37 +359,100 @@ a {
     align-items: center;
     background: #000;
     border-radius: 50%;
-
-
+    margin: 33px;
 }
 
 .join-now-item--main {
     width: 371px;
     height: 371px;
     background-color: #ffffff;
+    top: calc(50% - 371px/2);
+    left: calc(50% - 371px/2);
+    margin: 33px;
 
-    h2 {
+    &-title {
         @include Dosis-font(60px, #2f1946);
         text-transform: uppercase;
     }
 
-    p {
+    &-subtitle {
         margin-top: 19px;
         @include Dosis-font(46px, #2f1946);
     }
+}
 
-    .join-now-btn {
-        margin-top: 28px;
-        width: 139px;
-        height: 39px;
-        border-radius: 3px;
-        background-color: #e22028;
-        background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
+.join-now-btn {
+    margin-top: 28px;
+    width: 139px;
+    height: 39px;
+    border-radius: 3px;
+    background-color: #e22028;
+    background-image: linear-gradient(to right, #e22028 0%, #f9b416 100%);
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:hover {
+        color: #2f1946;
     }
 
+    &:active {
+        background: #81398b;
+        top: 2px;
+        color: #ffffff;
+    }
+}
+
+.border-join-item {
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: calc(50% - 371px/2);
-    left: calc(50% - 371px/2);
+    top: calc(50% - 439px/2);
+    left: calc(50% - 439px/2);
+}
+
+.send_flowers {
+    top: calc(26% - 257px/2);
+    left: calc(25% - 257px/2);
+}
+
+.genders {
+    top: calc(80% - 159px/2);
+    left: calc(30% - 159px/2);
+}
+
+.languages {
+    top: calc(19% - 169px/2);
+    left: calc(72% - 169px/2);
+}
+
+.chat_t {
+    top: calc(63% - 257px/2);
+    left: calc(88% - 257px/2);
+}
+
+.flower {
+    top: calc(35% - 159px/2);
+    left: calc(0% - 159px/2);
+}
+
+.like {
+    top: calc(68% - 169px/2);
+    left: calc(10% - 169px/2);
+}
+
+.gift {
+    top: calc(70% - 169px/2);
+    left: calc(70% - 169px/2);
+}
+
+.chat {
+    top: calc(23% - 159px/2);
+    left: calc(95% - 159px/2);
 }
 
 .red {
@@ -379,102 +485,214 @@ a {
 footer {
     display: flex;
     flex-direction: column;
+}
 
-    .newSlitter {
-        padding: 35px 0;
+.newSlitter {
+    padding: 35px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-content {
+        padding-right: 15px;
+        @include Dosis-font(16px, #00cfae)
+    }
+
+    &-input {
+        width: 285px;
+        height: 36px;
+        padding-left: 13px;
+        border-radius: 4px 0 0 4px;
+        border: 1px solid #cdcdcd;
+        background-color: #ffffff;
+        cursor: pointer;
+        color: black;
+
+        @include Lato-font();
+
+        &:active {
+            border: 1px solid #00cfae;
+        }
+
+        &::placeholder {
+            @include Dosis-font(16px, #cacaca)
+        }
+
+    }
+
+    &-btn {
+        width: 135px;
+        height: 40px;
+        border-radius: 0 4px 4px 0;
+        background-color: #00cfae;
+        transition: 1s linear;
+
+        &:hover {
+            background-color: #ff6c00;
+        }
+
+        &:active {
+            box-shadow: inset 10px 10px 30px rgba(00, 0, 0, 0.2);
+        }
+    }
+}
+
+.about {
+    height: 70px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-link {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 828px;
 
-        p {
-            padding-right: 15px;
-            @include Dosis-font(16px, #00cfae)
-        }
-
-        input {
-            width: 285px;
-            height: 36px;
-            padding-left: 13px;
-            border-radius: 4px 0 0 4px;
-            border: 1px solid #cdcdcd;
-            background-color: #ffffff;
-
-            @include Lato-font()
-        }
-
-        button {
-            width: 135px;
-            height: 40px;
-            border-radius: 0 4px 4px 0;
-            background-color: #00cfae;
-        }
+        @include Dosis-font(16px, #2f1946, 30px);
+        text-transform: uppercase;
     }
+}
 
-    .about {
-        height: 70px;
-        background-color: #fafafa;
+.link:hover {
+    color: #00cfae;
+}
+
+.flag {
+    display: flex;
+    justify-content: center;
+    padding: 23px 0;
+
+    &-link {
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &-link {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 828px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 710px;
 
 
-            @include Dosis-font(16px, #2f1946, 30px);
-            text-transform: uppercase;
+        a:active {
+            -webkit-transform: scale(2);
+            transform: scale(1);
+            max-height: 18px;
+            max-width: 12px;
         }
+
     }
+}
 
-    .flag {
-        display: flex;
-        justify-content: center;
-        padding: 23px 0;
+.line {
+    width: 46%;
+    height: 1px;
+    border-radius: 1px;
+    background-color: #d3d3d3;
+}
 
-        &-link {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 710px;
-        }
-    }
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 14px 0;
+    transition: 0s 9999999s;
 
-    .line {
-        width: 46%;
-        height: 1px;
-        border-radius: 1px;
-        background-color: #d3d3d3;
-    }
-
-    .ps {
-        display: flex;
-        justify-content: center;
-        padding: 14px 0;
-
-        @include Lato-font(12px, #2f1946, 24px)
-    }
-
+    @include Lato-font(12px, #2f1946, 24px)
 }
 
 .left-bar {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     border-radius: 0 3px 3px 0;
     background-color: #45124c;
-
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 50px;
     height: 195px;
-
     position: fixed;
     top: calc(50% - 97px);
     left: 0;
 
+}
+
+@media screen and (max-width: 1400px) {
+
+    .start-container {
+        &-logo {
+            padding-top: 50px;
+        }
+
+        &-title {
+            padding-top: 35px;
+        }
+
+        &-btn-border {
+            margin-top: 53px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .start-container {
+        &-logo {
+            padding-top: 30px;
+        }
+
+        &-title {
+            padding-top: 25px;
+            font-size: 50px;
+        }
+
+        &-btn-border {
+            margin-top: 43px;
+        }
+    }
+
+    .block-items {
+        margin-top: -189px;
+
+        &-item {
+            width: 180px;
+            height: 190px;
+        }
+    }
+
+    .block-subitems {
+        &-subitem {
+            width: 180px;
+            height: 80px;
+        }
+    }
+
+    .languages {
+        top: calc(12% - 169px/2);
+    }
+
+    .gift {
+        top: calc(85% - 169px/2);
+    }
+
+    .send_flowers {
+        top: calc(20% - 257px/2);
+        left: calc(24% - 257px/2);
+    }
+}
+
+@media screen and (max-width: 996px) {
+
+    .start-container {
+        &-title {
+            display: none;
+        }
+
+    }
+
+    .main-title {
+        padding-top: 100px;
+    }
+
+    .genders {
+        top: calc(85% - 159px/2);
+        left: calc(25% - 159px/2);
+    }
 
 }
